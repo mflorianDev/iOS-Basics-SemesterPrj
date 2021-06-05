@@ -20,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		8D484F9F266BCBEE003C3DCA /* CITYBIKEOGD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CITYBIKEOGD.json; sourceTree = SOURCE_ROOT; };
+		8D484FA1266BF349003C3DCA /* StartPosition.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StartPosition.gpx; sourceTree = "<group>"; };
 		8D8B19D0266A2A000017B66A /* Semesterarbeit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Semesterarbeit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8B19D3266A2A000017B66A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D8B19D5266A2A000017B66A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		8D8B19C7266A2A000017B66A = {
 			isa = PBXGroup;
 			children = (
+				8D484FA1266BF349003C3DCA /* StartPosition.gpx */,
 				8D8B19D2266A2A000017B66A /* Semesterarbeit */,
 				8D8B19D1266A2A000017B66A /* Products */,
 			);

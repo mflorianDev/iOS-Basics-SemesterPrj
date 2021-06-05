@@ -51,8 +51,8 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
-         identifier = "Honolulu, HI, USA"
-         referenceType = "1">
+         identifier = "../../StartPosition.gpx"
+         referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
