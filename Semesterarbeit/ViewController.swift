@@ -18,10 +18,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set initial location in Honolulu
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        // Set initial location in Vienna
+        let initialLocation = CLLocation(latitude: 48.205365788495456, longitude: 16.35984682212794)
         mapView.centerToLocation(initialLocation)
         
+        /*
+        //Constraining the Camera
         let oahuCenter = CLLocation(latitude: 21.4765, longitude: -157.9647)
         let region = MKCoordinateRegion(
           center: oahuCenter.coordinate,
@@ -30,9 +32,9 @@ class ViewController: UIViewController {
         mapView.setCameraBoundary(
           MKMapView.CameraBoundary(coordinateRegion: region),
           animated: true)
-        
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 200000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
+        */
         
         // setting ViewController as the delegate of the map view
         mapView.delegate = self
@@ -74,7 +76,7 @@ class ViewController: UIViewController {
     private func loadInitialData() {
       // 1
       guard
-        let fileName = Bundle.main.url(forResource: "PublicArt", withExtension: "geojson"),
+        let fileName = Bundle.main.url(forResource: "CITYBIKEOGD", withExtension: "json"),
         let artworkData = try? Data(contentsOf: fileName)
         else {
           return

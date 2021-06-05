@@ -44,8 +44,8 @@ class Artwork: NSObject, MKAnnotation {
     }
 
     // 3
-    title = properties["title"] as? String
-    locationName = properties["location"] as? String
+    title = properties["STATION"] as? String
+    locationName = properties["BEZIRK"] as? String
     discipline = properties["discipline"] as? String
     coordinate = point.coordinate
     super.init()

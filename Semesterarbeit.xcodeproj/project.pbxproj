@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D484FA0266BCBEE003C3DCA /* CITYBIKEOGD.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D484F9F266BCBEE003C3DCA /* CITYBIKEOGD.json */; };
 		8D8B19D4266A2A000017B66A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B19D3266A2A000017B66A /* AppDelegate.swift */; };
 		8D8B19D6266A2A000017B66A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B19D5266A2A000017B66A /* SceneDelegate.swift */; };
 		8D8B19D8266A2A000017B66A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B19D7266A2A000017B66A /* ViewController.swift */; };
@@ -14,11 +15,11 @@
 		8D8B19DD266A2A010017B66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B19DC266A2A010017B66A /* Assets.xcassets */; };
 		8D8B19E0266A2A010017B66A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B19DE266A2A010017B66A /* LaunchScreen.storyboard */; };
 		8D8B19EA266A43D50017B66A /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B19E9266A43D50017B66A /* Artwork.swift */; };
-		8D8B19F6266A5D5E0017B66A /* PublicArt.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B19F5266A5D5E0017B66A /* PublicArt.geojson */; };
 		8D8B19F8266A60C40017B66A /* ArtworkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B19F7266A60C40017B66A /* ArtworkViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D484F9F266BCBEE003C3DCA /* CITYBIKEOGD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CITYBIKEOGD.json; sourceTree = SOURCE_ROOT; };
 		8D8B19D0266A2A000017B66A /* Semesterarbeit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Semesterarbeit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8B19D3266A2A000017B66A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D8B19D5266A2A000017B66A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +29,6 @@
 		8D8B19DF266A2A010017B66A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D8B19E1266A2A010017B66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8B19E9266A43D50017B66A /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
-		8D8B19F5266A5D5E0017B66A /* PublicArt.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = PublicArt.geojson; sourceTree = SOURCE_ROOT; };
 		8D8B19F7266A60C40017B66A /* ArtworkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,7 @@
 		8D8B19D2266A2A000017B66A /* Semesterarbeit */ = {
 			isa = PBXGroup;
 			children = (
-				8D8B19F5266A5D5E0017B66A /* PublicArt.geojson */,
+				8D484F9F266BCBEE003C3DCA /* CITYBIKEOGD.json */,
 				8D8B19D3266A2A000017B66A /* AppDelegate.swift */,
 				8D8B19D5266A2A000017B66A /* SceneDelegate.swift */,
 				8D8B19D7266A2A000017B66A /* ViewController.swift */,
@@ -136,7 +136,7 @@
 			files = (
 				8D8B19E0266A2A010017B66A /* LaunchScreen.storyboard in Resources */,
 				8D8B19DD266A2A010017B66A /* Assets.xcassets in Resources */,
-				8D8B19F6266A5D5E0017B66A /* PublicArt.geojson in Resources */,
+				8D484FA0266BCBEE003C3DCA /* CITYBIKEOGD.json in Resources */,
 				8D8B19DB266A2A000017B66A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Semesterarbeit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Semesterarbeit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
