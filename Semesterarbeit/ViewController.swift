@@ -49,22 +49,22 @@ class ViewController: UIViewController {
         mapView.addAnnotation(artwork)
         */
         
-        /*
+        
         // Here, you register your new class with the map view’s default reuse identifier.
         // For an app with more annotation types, you would register classes with custom identifiers.
         mapView.register(
         ArtworkMarkerView.self,
         forAnnotationViewWithReuseIdentifier:
           MKMapViewDefaultAnnotationViewReuseIdentifier)
-        */
         
+        /*
         // Annotations with Images
         // Here, you register your class "ArtworkView" from ArtworkViews.swift with the map view’s default reuse identifier.
         mapView.register(
         ArtworkView.self,
         forAnnotationViewWithReuseIdentifier:
           MKMapViewDefaultAnnotationViewReuseIdentifier)
-
+        */
         
         // add artwork annotations from array to the map
         loadInitialData()

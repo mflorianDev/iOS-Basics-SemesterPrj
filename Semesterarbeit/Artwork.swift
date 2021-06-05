@@ -12,22 +12,20 @@ import Contacts
 
 
 class Artwork: NSObject, MKAnnotation {
+  let station: String?
+  let district: Int?
   let title: String?
-  let locationName: String?
-  let discipline: String?
   let coordinate: CLLocationCoordinate2D
 
   init(
-    title: String?,
-    locationName: String?,
-    discipline: String?,
+    station: String?,
+    district: Int?,
     coordinate: CLLocationCoordinate2D
   ) {
-    self.title = title
-    self.locationName = locationName
-    self.discipline = discipline
+    self.station = station
+    self.district = district
     self.coordinate = coordinate
-
+    self.title = station
     super.init()
   }
 
@@ -44,9 +42,9 @@ class Artwork: NSObject, MKAnnotation {
     }
 
     // 3
+    station = properties["STATION"] as? String
+    district = properties["BEZIRK"] as? Int
     title = properties["STATION"] as? String
-    locationName = properties["BEZIRK"] as? String
-    discipline = properties["discipline"] as? String
     coordinate = point.coordinate
     super.init()
   }
@@ -54,13 +52,14 @@ class Artwork: NSObject, MKAnnotation {
 
 
   var subtitle: String? {
-    return locationName
+    return "subtitle"
   }
+
     
   // create MKMapItem's to pass them to Maps App
   // first create placemarks and then mapitems
   var mapItem: MKMapItem? {
-    guard let location = locationName else {
+    guard let location = station else {
         return nil
     }
     let addressDict = [CNPostalAddressStreetKey: location]
@@ -68,26 +67,43 @@ class Artwork: NSObject, MKAnnotation {
         coordinate: coordinate,
         addressDictionary: addressDict)
     let mapItem = MKMapItem(placemark: placemark)
-    mapItem.name = title
+    mapItem.name = station
     return mapItem
     }
     
   // change marker-color by property discipline
   var markerTintColor: UIColor  {
-    switch discipline {
-    case "Monument":
+    switch district {
+    case 1, 12:
       return .red
-    case "Mural":
-      return .cyan
-    case "Plaque":
-      return .blue
-    case "Sculpture":
-      return .purple
-    default:
+    case 4, 13, 18:
       return .green
+    case 6, 16, 20:
+      return .blue
+    case 7, 19:
+      return .cyan
+    case 8, 22:
+      return .yellow
+    case 9, 15, 23:
+      return .magenta
+    case 2:
+      return .orange
+    case 3, 17:
+      return .purple
+    case 5, 14, 21:
+      return .brown
+    default:
+      return .gray
     }
   }
     
+    // set the glyph’s image instead of its text
+    var image: UIImage {
+        return #imageLiteral(resourceName: "Citybike")
+    }
+
+
+    /*
     // set the glyph’s image instead of its text
     var image: UIImage {
       guard let name = discipline else {
@@ -107,5 +123,6 @@ class Artwork: NSObject, MKAnnotation {
         return #imageLiteral(resourceName: "Flag")
       }
     }
+    */
 
 }

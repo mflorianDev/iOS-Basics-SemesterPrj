@@ -33,6 +33,7 @@ class ArtworkMarkerView: MKMarkerAnnotationView {
   }
 }
 
+/*
 // using an MKAnnotationView instead of an MKMarkerAnnotationView, and the view has an image property.
 class ArtworkView: MKAnnotationView {
   override var annotation: MKAnnotation? {
@@ -43,14 +44,16 @@ class ArtworkView: MKAnnotationView {
 
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
-      //rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-    
+      rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+      
+      /*
       // Change the right callout accessory info button, so when clicked it shows the Maps icon.
       let mapsButton = UIButton(frame: CGRect(
         origin: CGPoint.zero,
         size: CGSize(width: 48, height: 48)))
       mapsButton.setBackgroundImage(#imageLiteral(resourceName: "Map"), for: .normal)
       rightCalloutAccessoryView = mapsButton
+      */
         
       image = artwork.image
         
@@ -64,4 +67,4 @@ class ArtworkView: MKAnnotationView {
     }
   }
 }
-
+*/
