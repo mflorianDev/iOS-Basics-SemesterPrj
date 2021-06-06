@@ -1,6 +1,6 @@
 //
 //  Artwork.swift
-//  MapKit_Mojave
+//  Semesterarbeit
 //
 //  Created by macciMac on 04.06.21.
 //  Copyright © 2021 macciMac. All rights reserved.
@@ -12,11 +12,11 @@ import Contacts
 
 
 class Artwork: NSObject, MKAnnotation {
-  let station: String?
   let district: Int?
   let title: String?
   let coordinate: CLLocationCoordinate2D
-
+  
+  /*
   init(
     station: String?,
     district: Int?,
@@ -28,6 +28,7 @@ class Artwork: NSObject, MKAnnotation {
     self.title = station
     super.init()
   }
+  */
 
   // Decoding GeoJSON with MKGeoJSONDecoder and return an array of objects
   init?(feature: MKGeoJSONFeature) {
@@ -42,7 +43,6 @@ class Artwork: NSObject, MKAnnotation {
     }
 
     // 3
-    station = properties["STATION"] as? String
     district = properties["BEZIRK"] as? Int
     title = properties["STATION"] as? String
     coordinate = point.coordinate
@@ -50,16 +50,17 @@ class Artwork: NSObject, MKAnnotation {
   }
 
 
-
+  /*
   var subtitle: String? {
-    return "subtitle"
+    return "Citybike-Station"
   }
+  */
 
     
   // create MKMapItem's to pass them to Maps App
   // first create placemarks and then mapitems
   var mapItem: MKMapItem? {
-    guard let location = station else {
+    guard let location = title else {
         return nil
     }
     let addressDict = [CNPostalAddressStreetKey: location]
@@ -67,7 +68,7 @@ class Artwork: NSObject, MKAnnotation {
         coordinate: coordinate,
         addressDictionary: addressDict)
     let mapItem = MKMapItem(placemark: placemark)
-    mapItem.name = station
+    mapItem.name = title
     return mapItem
     }
     

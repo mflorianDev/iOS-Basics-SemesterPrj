@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MapKit_Mojave
+//  Semesterarbeit
 //
 //  Created by macciMac on 04.06.21.
 //  Copyright © 2021 macciMac. All rights reserved.
@@ -97,6 +97,18 @@ class ViewController: UIViewController {
       }
     }
 
+    @IBAction func mapTypeSelection(_ sender: UISegmentedControl) {
+        switch (sender.selectedSegmentIndex) {
+            case 0:
+                mapView.mapType = .standard
+            case 1:
+                mapView.mapType = .satellite
+            case 2:
+                mapView.mapType = .hybrid
+            default:
+                mapView.mapType = .standard
+        }
+    }
 }
 
 private extension MKMapView {

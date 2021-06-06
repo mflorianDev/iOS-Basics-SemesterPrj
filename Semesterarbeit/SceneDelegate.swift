@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  MapKit_Mojave
+//  Semesterarbeit
 //
 //  Created by macciMac on 04.06.21.
 //  Copyright © 2021 macciMac. All rights reserved.
