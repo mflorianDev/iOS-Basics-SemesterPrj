@@ -16,19 +16,6 @@ class Artwork: NSObject, MKAnnotation {
   let title: String?
   let coordinate: CLLocationCoordinate2D
   
-  /*
-  init(
-    station: String?,
-    district: Int?,
-    coordinate: CLLocationCoordinate2D
-  ) {
-    self.station = station
-    self.district = district
-    self.coordinate = coordinate
-    self.title = station
-    super.init()
-  }
-  */
 
   // Decoding GeoJSON with MKGeoJSONDecoder and return an array of objects
   init?(feature: MKGeoJSONFeature) {
@@ -48,13 +35,6 @@ class Artwork: NSObject, MKAnnotation {
     coordinate = point.coordinate
     super.init()
   }
-
-
-  /*
-  var subtitle: String? {
-    return "Citybike-Station"
-  }
-  */
 
     
   // create MKMapItem's to pass them to Maps App
@@ -102,28 +82,5 @@ class Artwork: NSObject, MKAnnotation {
     var image: UIImage {
         return #imageLiteral(resourceName: "Citybike")
     }
-
-
-    /*
-    // set the glyph’s image instead of its text
-    var image: UIImage {
-      guard let name = discipline else {
-        return #imageLiteral(resourceName: "Flag")
-      }
-
-      switch name {
-      case "Monument":
-        return #imageLiteral(resourceName: "Monument")
-      case "Sculpture":
-        return #imageLiteral(resourceName: "Sculpture")
-      case "Plaque":
-        return #imageLiteral(resourceName: "Plaque")
-      case "Mural":
-        return #imageLiteral(resourceName: "Mural")
-      default:
-        return #imageLiteral(resourceName: "Flag")
-      }
-    }
-    */
 
 }
