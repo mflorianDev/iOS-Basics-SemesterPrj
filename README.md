@@ -1,4 +1,4 @@
-# iOS-Basics - Semesterprojekt
+# iOS Basics - Semesterprojekt
 
 ### Aufgabenstellung:
 Erstellen Sie eine App zur Darstellung von CityBike-Stationen in Wien auf einer Karte.
